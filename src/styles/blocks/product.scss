@@ -1,0 +1,32 @@
+.product {
+  &__photo {
+    display: block;
+    width: 100%;
+
+    @include hover(transform, scale(103%));
+  }
+
+  &__title {
+    margin-block-start: 24px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  &__description {
+    margin-block-start: 8px;
+
+    @include on-desktop {
+      margin-block-end: calc($page-font-size * $page-line-height + $product-price-top-margin);
+    }
+  }
+
+  &__price {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    margin-block-start: $product-price-top-margin;
+
+    @include on-desktop {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
